@@ -1,0 +1,18 @@
+---
+
+- hosts: 172.16.120.112
+  become: true
+  tasks:
+  
+  - name: Set proxy for GIT
+    git_config:
+      name: http.proxy
+      value: http://72.163.217.105:80
+      scope: global
+  - name: Pull from GIT
+    git:
+      repo: https://github.com/Raghul-Gop/nvm_stress.git
+      dest: /home/raghul/nvm_stress
+      update: yes
+      clone: no
+      
