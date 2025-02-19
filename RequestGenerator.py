@@ -28,7 +28,7 @@ def generate_tcp_traffic(connections_per_second, iterations):
 start = int(time.time())  # get time before the requests are sent
 
 #Change the connections per second value here to set the number of records that needs to be sent
-generate_tcp_traffic(connections_per_second=3000, iterations=5)
+generate_tcp_traffic(connections_per_second=1000, iterations=5)
 
 end = int(time.time())  # get time after the requests are finished
 print(f"total_connections : {total_connections},total_iterations : {total_iterations}")
