@@ -18,7 +18,7 @@ def generate_tcp_traffic(connections_per_second, iterations):
     requests.packages.urllib3.util.connection.HAS_IPV6 = False
     for y in range(connections_per_second):
         #print("second for loop")
-        urls.append("http://10.126.111.238")
+        urls.append("http://172.16.120.16")
     for _ in range(iterations):
         with concurrent.futures.ThreadPoolExecutor(max_workers=10000) as executor:
             futures = []
